@@ -1,4 +1,4 @@
-# ABS
+# ABS.Stat
 
 This module uses the pandasdmx package to retrieve data from the Australian Bureau of Statistics using the ABS.Stat Developer API.
 
