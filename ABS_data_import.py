@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 #-------------------------------------------------------------------------------
-# Name:         ABS data import
+# Name:         ABS.Stat data import
 # Purpose:      Programmatically import ABS data through the API
 #
 # Author:       Luke Oswald
