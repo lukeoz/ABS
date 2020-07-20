@@ -38,7 +38,7 @@ def ABS_data_import(url, output_dir="C:/TEMP/", client_timeout=60):
         filter_expression = url.split('/')[6]
 
         params = {}
-        if url.split('/')[7].find("?") == -1: # no additional parameters used
+        if url.split('/')[7].find("?") != -1: # no additional parameters used
             agency_name = url.split('/')[7]
             for i in url.split('/')[7]\
                     [url.split('/')[7].find("?")+1:].split("&"):
