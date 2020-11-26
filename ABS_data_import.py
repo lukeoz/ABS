@@ -73,17 +73,21 @@ def ABS_data_import(url, output_dir="C:/TEMP/", client_timeout=60):
     agency_code = "ABS"
 
     ABS = Request(agency_code)
-    ABS.client.config["timeout"] = client_timeout
+    #ABS.client.config["timeout"] = client_timeout
+    ABS.timeout = client_timeout
     data_response = ABS.data(resource_id=resource_id, params=params)
 
 
     # write extracted data to data frame
 
+    '''
     df = data_response.write(
             data_response.data.series,
             parse_time=False
             ).unstack().reset_index()
-
+    '''
+    df = data_response.to_pandas().reset_index()
+    
     # rename unnamed column
     df.rename(columns={0:"Value"}, inplace=True)
 
